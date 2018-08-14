@@ -13,10 +13,16 @@ namespace DailyRateOptionalParameters
             (new Program()).run();
         }
 
-        private double calculateFee(double dailyRate = 500.0, int noOfDays = 1)
+        public void run()
+        {
+            double fee = calculateFee(theDailyRate : 375.0);
+            Console.WriteLine($"Fee is {fee}");
+        }
+
+        private double calculateFee(double theDailyRate = 500.0, int noOfDays = 1)
         {
             Console.WriteLine("calculateFee using two optional parameters");
-            return dailyRate * noOfDays;
+            return theDailyRate * noOfDays;
         }
 
         private double calculateFee(double dailyRate = 500.0)
